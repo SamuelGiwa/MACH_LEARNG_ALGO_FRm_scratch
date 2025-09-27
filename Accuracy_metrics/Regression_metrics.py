@@ -148,4 +148,3 @@ def HuberLoss(y_act, y_pred, delta=1.0) -> float:
     linear_loss = delta * (np.abs(error) - delta / 2)
     
     return np.where(is_small_error, squared_loss, linear_loss).mean()
-
