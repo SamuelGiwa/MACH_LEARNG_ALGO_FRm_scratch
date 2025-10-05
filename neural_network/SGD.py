@@ -7,11 +7,11 @@ def sigmoid(v):
 # Stochastic Gradient Descent (SGD) update function
 def DeltaSGD(W, X, D):
     alpha = 0.9  # Learning rate
-    N = X.shape[0]  # Number of samples
+    N = X.shape[0]  
 
     for k in range(N):
-        x = X[k, :].reshape(-1, 1)  # Extracting the row vector and reshape to column vector
-        d = D[k]  # Desired output
+        x = X[k, :].reshape(-1, 1) 
+        d = D[k]  
 
         v = np.dot(W, x)  # Dot product to compute the weighted sum
         y = sigmoid(v)    # Applying sigmoid to get output
